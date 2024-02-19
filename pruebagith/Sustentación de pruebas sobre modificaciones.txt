@@ -1,0 +1,223 @@
+PRUEBAS DE MODIFICACIÓN
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        modified:   second.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git add second.txt
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   second.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git commite
+git: 'commite' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   second.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+        modified:   third.txt
+
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git add third.txt
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git commit
+hint: Waiting for your editor to close th[main 56a5f35] Heidy Inge
+ 2 files changed, 2 insertions(+)
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git commit
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+        modified:   third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$
+
+
+
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git add -A
+error: 'gitbashone/' does not have a commit checked out
+fatal: adding files failed
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git commit
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+        modified:   third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitbashone/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git add gitbashone
+error: 'gitbashone/' does not have a commit checked out
+fatal: adding files failed
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git commit
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   mi-archivo.txt
+        deleted:    segundo-archi
+        deleted:    segundo-archi.txt
+        modified:   third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitbashone/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git add -m gitbashone
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --[no-]dry-run    dry run
+    -v, --[no-]verbose    be verbose
+
+    -i, --[no-]interactive
+                          interactive picking
+    -p, --[no-]patch      select hunks interactively
+    -e, --[no-]edit       edit current diff and apply
+    -f, --[no-]force      allow adding otherwise ignored files
+    -u, --[no-]update     update tracked files
+    --[no-]renormalize    renormalize EOL of tracked files (implies -u)
+    -N, --[no-]intent-to-add
+                          record only the fact that the path will be added later
+    -A, --[no-]all        add changes from all tracked and untracked files
+    --[no-]ignore-removal ignore paths removed in the working tree (same as --no-all)
+    --[no-]refresh        don't add, only refresh the index
+    --[no-]ignore-errors  just skip files which cannot be added because of errors
+    --[no-]ignore-missing check if - even missing - files are ignored in dry run
+    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
+    --[no-]chmod (+|-)x   override the executable bit of the listed files
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+57350@ASTROVALEN MINGW64 ~/Documents/pruebagith (main)
+$ git log
+commit 56a5f359d1d5ae5daf0f3639edcb60acbbca11b3 (HEAD -> main)
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:42:30 2024 -0500
+
+    Heidy Inge
+
+commit 9b8032632d15c656b7083e01f3373e90a5216bfc
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:35:43 2024 -0500
+
+    Valentina la Inge
+
+commit 7f340a0afd904c4ef738358a0dc2f582dc412f63
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:28:14 2024 -0500
+
+    Licenciada Liz
+
+commit 9e2ebf18fa0dbdf0a01e1845b742e04353eb0022
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:16:53 2024 -0500
+
+    Licenciada Heidy
+
+commit 5749881f890bd089cac0cc84efeb8b2895761cfe
+:
+commit 56a5f359d1d5ae5daf0f3639edcb60acbbca11b3 (HEAD -> main)
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:42:30 2024 -0500
+
+    Heidy Inge
+
+commit 9b8032632d15c656b7083e01f3373e90a5216bfc
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:35:43 2024 -0500
+
+    Valentina la Inge
+
+commit 7f340a0afd904c4ef738358a0dc2f582dc412f63
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:28:14 2024 -0500
+
+    Licenciada Liz
+
+commit 9e2ebf18fa0dbdf0a01e1845b742e04353eb0022
+Author: Astrova <prueba@correo.com>
+Date:   Sun Feb 18 21:16:53 2024 -0500
+
+    Licenciada Heidy
+
+commit 5749881f890bd089cac0cc84efeb8b2895761cfe
+:
